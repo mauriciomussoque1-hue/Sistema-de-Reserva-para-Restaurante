@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cardápio - Restaurante MM</title>
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img class="img" src="menu/IMG-20260217-WA0002.jpg" alt="Restaurante MM">
+            <h1>Restaurante MM</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="Sobre.html">Sobre</a></li>
+           
+    </nav>
+
+    <!-- HEADER -->
+    <header class="menu-header">
+        <div>
+            <h1>Cardápio do Restaurante MM</h1>
+            <p>Sabores que encantam, momentos que marcam.</p>
+        </div>
+
+        <img src="menu/moca_cropped.png" alt="Funcionária Restaurante MM">
+    </header>
+    <!-- CONTEÚDO -->
+    <main class="menu-container">
+
+        <!-- PRATOS ADICIONADOS PELO GERENTE -->
+        <section class="menu-category">
+            <h2>Entradas</h2>
+
+            <div id="lista-pratos"></div>
+        </section>
+    </main>
+
+    <script>
+        fetch("listar_pratos.php")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("lista-pratos").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

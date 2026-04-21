@@ -1,0 +1,255 @@
+     /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            color: red;
+             margin: 0%;
+            margin: none;
+        }
+
+        /* Navbar melhorada */
+         nav {
+            height: 80px;
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            width: 1349px;
+            z-index: 100;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-scrolled {
+            height: 80px;
+            background:rgba(255, 0, 0, 0.808);
+            backdrop-filter:blur(5px);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        nav h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: white;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            border: white;
+            border-radius: 9%;
+            color: red;
+        }
+        
+        .nav-links li {
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: red;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            border-radius: 29%;
+            background-color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 5px;
+            left: 50%;
+            background-color: rgb(255, 0, 0);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: rgb(255, 0, 0);
+        }
+        
+        .nav-links a:hover:after {
+            width: 80%;
+            left: 10%;
+        }
+
+
+        /* Banner principal */
+        #gas {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        #gas h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        #gas span {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #gas p {
+            font-size: 16px;
+        }
+
+        /* Menu interativo */
+        .menu-interativo {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .prato-card {
+            border: 2px solid red;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .prato-card:hover {
+            transform: scale(1.05);
+        }
+
+        .prato-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .prato-info {
+            padding: 15px;
+        }
+
+        .prato-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .prato-info p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            font-weight: bold;
+            color: black;
+            font-size: 16px;
+        }
+
+         /* Footer */
+        footer {
+            background: #111;
+            color: #999;
+            padding: 80px 10% 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .footer-col i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h2 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplificado para o exemplo */
+            .navbar { padding: 1rem 5%; }
+        }
+

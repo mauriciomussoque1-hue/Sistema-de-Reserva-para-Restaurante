@@ -1,0 +1,175 @@
+body {
+            margin: 0%;
+            margin: none;
+        }
+        
+     
+     /* Navbar melhorada */
+         nav {
+            height: 80px;
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            width: 1230px;
+            z-index: 100;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-scrolled {
+            height: 80px;
+            background:rgba(255, 0, 0, 0.808);
+            backdrop-filter:blur(5px);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        nav h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: white;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            border: white;
+            border-radius: 9%;
+            color: red;
+        }
+        
+        .nav-links li {
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: red;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            border-radius: 29%;
+            background-color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 5px;
+            left: 50%;
+            background-color: rgb(255, 0, 0);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: rgb(255, 0, 0);
+        }
+        
+        .nav-links a:hover:after {
+            width: 80%;
+            left: 10%;
+        }
+
+
+.ambiente-exclusivo {
+    background-color: #fff; /* Fundo branco limpo para contrastar com a gastronomia */
+    color: #1a1a1a;
+    padding: 100px 0;
+}
+
+.ambiente-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    min-height: 500px;
+}
+
+/* Inverte a ordem da imagem e texto no segundo bloco */
+.ambiente-item.invertido {
+    flex-direction: row-reverse;
+}
+
+.ambiente-imagem {
+    flex: 0 0 55%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Paralaxe: a imagem corre mais devagar */
+    box-shadow: 20px 20px 0px #d4af37; /* Detalhe em dourado deslocado */
+}
+
+.ambiente-item.invertido .ambiente-imagem {
+    box-shadow: -20px 20px 0px #d4af37; /* Inverte a sombra no bloco invertido */
+}
+
+.ambiente-texto {
+    flex: 0 0 35%;
+    padding: 0 5%;
+}
+
+.ambiente-texto span {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    color: #d4af37;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.ambiente-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.ambiente-texto p {
+    font-family: 'Lora', serif;
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .ambiente-item, .ambiente-item.invertido {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    .ambiente-imagem {
+        width: 100%;
+        height: 300px;
+        background-attachment: scroll; /* Desativa paralaxe no mobile para performance */
+    }
+    .ambiente-texto {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+}
